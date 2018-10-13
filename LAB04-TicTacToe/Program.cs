@@ -22,8 +22,8 @@ namespace Lab04_TicTacToe
             o.Marker = "O";
 
             // Create the Game
-            Board TicTacToe = new Board();
-            TicTacToe.DisplayBoard();
+            Game game = new Game(x, o);
+            game.Play();
 			// Play the Game
 			// Output the winner
 		}

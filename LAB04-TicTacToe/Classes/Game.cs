@@ -30,7 +30,7 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
-            return null;
+            
 			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
 			/*
@@ -41,7 +41,18 @@ namespace Lab04_TicTacToe.Classes
 			 board so the next player can accurately choose. 
 			 Once a winner is determined, display the board and return a winner 
 			 */
-		}
+
+            while (!CheckForWinner(Board))
+            {
+                Player p = NextPlayer();
+                Console.WriteLine(p.Name);
+                Console.ReadLine();
+                SwitchPlayer();
+
+                
+            }
+            return null;
+        }
 
 
 		/// <summary>
