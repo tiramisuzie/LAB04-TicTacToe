@@ -7,7 +7,7 @@ namespace Lab04_TicTacToe
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+            PlayGame();
 		}
 
 		static void PlayGame()
@@ -20,8 +20,10 @@ namespace Lab04_TicTacToe
             Player o = new Player();
             o.Name = "player 2";
             o.Marker = "O";
-        
-			// Create the Game
+
+            // Create the Game
+            Board TicTacToe = new Board();
+            TicTacToe.DisplayBoard();
 			// Play the Game
 			// Output the winner
 		}
