@@ -46,9 +46,9 @@ namespace Lab04_TicTacToe.Classes
             {
                 Player p = NextPlayer();
                 Console.WriteLine(p.Name);
+                Board.DisplayBoard();
                 Console.ReadLine();
                 SwitchPlayer();
-
                 
             }
             return null;
