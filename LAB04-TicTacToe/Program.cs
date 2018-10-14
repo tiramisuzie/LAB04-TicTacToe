@@ -16,7 +16,6 @@ namespace Lab04_TicTacToe
             Player x = new Player();
             x.Name = "player 1";
             x.Marker = "X";
-            x.IsTurn = true;
             Player o = new Player();
             o.Name = "player 2";
             o.Marker = "O";

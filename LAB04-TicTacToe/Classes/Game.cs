@@ -44,11 +44,12 @@ namespace Lab04_TicTacToe.Classes
 
             while (!CheckForWinner(Board))
             {
-                Player p = NextPlayer();
-                Console.WriteLine(p.Name);
-                Board.DisplayBoard();
-                Console.ReadLine();
+
                 SwitchPlayer();
+                Player p = NextPlayer();
+                Board.DisplayBoard();
+                p.TakeTurn(Board);
+                Console.ReadLine();
                 
             }
             return null;
