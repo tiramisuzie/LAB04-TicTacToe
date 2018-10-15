@@ -30,10 +30,10 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
-            
-			//TODO: Complete this method and utilize the rest of the class structure to play the game.
 
-			/*
+            //TODO: Complete this method and utilize the rest of the class structure to play the game.
+
+            /*
 			 While there isn't a winner determined or too many turns have been taken,
 			 allow each player to see the board and take a turn.
 			 A turn consists of picking a position on the board, and then putting their appropriate marker
@@ -41,17 +41,19 @@ namespace Lab04_TicTacToe.Classes
 			 board so the next player can accurately choose. 
 			 Once a winner is determined, display the board and return a winner 
 			 */
-
+            Player p = NextPlayer();
             while (!CheckForWinner(Board))
             {
 
                 SwitchPlayer();
-                Player p = NextPlayer();
+                p = NextPlayer();
                 Board.DisplayBoard();
                 p.TakeTurn(Board);
                 Console.ReadLine();
                 
             }
+            Console.WriteLine("The winner is " + p.Name);
+            
             return null;
         }
 
@@ -88,10 +90,14 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
-			
-			}
+                if (a == b && b == c)
+                {
+                    return true;
+                }
+                // TODO:  Determine a winner has been reached. 
+                // return true if a winner has been reached. 
+
+            }
 
 			return false;
 		}
