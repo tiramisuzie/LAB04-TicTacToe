@@ -49,8 +49,6 @@ namespace Lab04_TicTacToe.Classes
                 p = NextPlayer();
                 Board.DisplayBoard();
                 p.TakeTurn(Board);
-                Console.ReadLine();
-                
             }
             Console.WriteLine("The winner is " + p.Name);
             
