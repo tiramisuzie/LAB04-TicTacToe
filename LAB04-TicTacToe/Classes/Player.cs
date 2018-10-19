@@ -17,7 +17,11 @@ namespace Lab04_TicTacToe.Classes
 		/// </summary>
 		public bool IsTurn { get; set; }
 
-
+        public Player(string name, string marker)
+        {
+            Name = name;
+            Marker = marker;
+        }
 		public Position GetPosition(Board board)
 		{
 			Position desiredCoordinate = null;

@@ -31,7 +31,7 @@ namespace Lab04_TicTacToe.Classes
 		public Player Play()
 		{
 
-            //TODO: Complete this method and utilize the rest of the class structure to play the game.
+            //DONE: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
 			 While there isn't a winner determined or too many turns have been taken,
@@ -49,6 +49,7 @@ namespace Lab04_TicTacToe.Classes
                 p = NextPlayer();
                 Board.DisplayBoard();
                 p.TakeTurn(Board);
+                
             }
             Console.WriteLine("The winner is " + p.Name);
             
@@ -92,7 +93,7 @@ namespace Lab04_TicTacToe.Classes
                 {
                     return true;
                 }
-                // TODO:  Determine a winner has been reached. 
+                // DONE:  Determine a winner has been reached. 
                 // return true if a winner has been reached. 
 
             }

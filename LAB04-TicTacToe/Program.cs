@@ -13,12 +13,10 @@ namespace Lab04_TicTacToe
 		static void PlayGame()
 		{
             // DONE: Instantiate your players
-            Player x = new Player();
-            x.Name = "player 1";
-            x.Marker = "X";
-            Player o = new Player();
-            o.Name = "player 2";
-            o.Marker = "O";
+            Player x = new Player("player 1", "X");
+           
+            Player o = new Player("player 2", "O");
+    
 
             // Create the Game
             Game game = new Game(x, o);
